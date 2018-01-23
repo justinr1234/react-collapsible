@@ -54,8 +54,10 @@ class Collapsible extends Component {
     if (prevProps.open !== this.props.open) {
       if(this.props.open === true) {
         this.openCollapsible();
+        this.props.onOpening();
       } else {
         this.closeCollapsible();
+        this.props.onClosing();
       }
     }
   }
